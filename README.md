@@ -51,8 +51,27 @@ pkg install termux-x11-nightly
 pkg install tur-repo
 pkg install pulseaudio
 pkg install proot-distro
+termux-setup-storage
 pkg install wget
 pkg install git
+proot-distro install debian
+proot-distro login debian
+apt update -y
+apt install sudo nano adduser -y
+adduser adiguna
+nano /etc/sudoers
+# Add the following line to the file
+adiguna ALL=(ALL:ALL) ALL
+su - adiguna
+whoami
+sudo whoami
+sudo apt install xfce4
+Logout
+Logout
+pkg install mesa-zink virglrenderer-mesa-zink vulkan-loader-android virglrenderer-android
+wget https://raw.githubusercontent.com/Adigunaguna/Termux-Desktops/main/scripts/proot_debian/start
+chmod +x start
+./start
 ```
 
 ---  
