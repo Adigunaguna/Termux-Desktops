@@ -3,7 +3,7 @@
 # Kill open X11 processes
 kill -9 $(pgrep -f "termux.x11") 2>/dev/null
 
-virgl_test_server_android
+virgl_test_server_android & > /dev/null 2>&1
 sleep 1
 
 # Enable PulseAudio over Network
